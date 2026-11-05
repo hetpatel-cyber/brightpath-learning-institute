@@ -28,6 +28,7 @@ export function Header() {
   }, [open]);
 
   return (
+    <>
     <header
       className={cn(
         "fixed inset-x-0 top-0 z-50 transition-all duration-300",
@@ -81,12 +82,13 @@ export function Header() {
           </button>
         </div>
       </div>
+    </header>
 
-      {/* Mobile menu */}
+      {/* Mobile menu — kept outside the header so its blur doesn't trap the fixed panel */}
       <div
         id="mobile-menu"
         className={cn(
-          "fixed inset-x-0 top-16 bottom-0 overflow-y-auto bg-background transition-all duration-300 md:top-20 lg:hidden",
+          "fixed inset-x-0 top-16 bottom-0 z-50 overflow-y-auto bg-background transition-all duration-300 md:top-20 lg:hidden",
           open ? "visible opacity-100" : "invisible -translate-y-2 opacity-0",
         )}
       >
@@ -120,6 +122,6 @@ export function Header() {
           </div>
         </nav>
       </div>
-    </header>
+    </>
   );
 }
