@@ -15,9 +15,8 @@ export function Hero() {
             className="mt-5 text-[2.5rem] leading-[1.04] font-extrabold text-navy animate-in fade-in slide-in-from-bottom-3 duration-700 min-[400px]:text-[2.85rem] sm:text-6xl lg:text-[4.1rem]"
           >
             Learn Better. Achieve More.{" "}
-            <span className="relative whitespace-nowrap">
+            <span className="underline decoration-gold/60 decoration-[0.12em] underline-offset-[0.12em] [text-decoration-skip-ink:none]">
               Build Your Future.
-              <span aria-hidden="true" className="absolute -bottom-1 left-0 h-[6px] w-full bg-gold/40" />
             </span>
           </h1>
           <p className="mt-7 max-w-xl text-base leading-relaxed text-muted-foreground animate-in fade-in duration-1000 sm:text-lg">

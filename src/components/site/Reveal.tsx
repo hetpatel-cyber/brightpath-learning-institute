@@ -1,15 +1,14 @@
-import { useEffect, useRef, useState, type ElementType, type ReactNode } from "react";
+import { useEffect, useRef, useState, type ElementType, type HTMLAttributes, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
-type RevealProps = {
+type RevealProps = HTMLAttributes<HTMLElement> & {
   as?: ElementType;
-  className?: string;
   delay?: number;
   children: ReactNode;
 };
 
 /** Gentle fade-up when the element enters the viewport. Respects reduced motion via CSS. */
-export function Reveal({ as: Tag = "div", className, delay = 0, children }: RevealProps) {
+export function Reveal({ as: Tag = "div", className, delay = 0, children, style, ...rest }: RevealProps) {
   const ref = useRef<HTMLElement | null>(null);
   const [visible, setVisible] = useState(false);
 
@@ -38,7 +37,8 @@ export function Reveal({ as: Tag = "div", className, delay = 0, children }: Reve
       ref={ref}
       data-visible={visible}
       className={cn("reveal", className)}
-      style={delay ? { transitionDelay: `${delay}ms` } : undefined}
+      style={delay ? { ...style, transitionDelay: `${delay}ms` } : style}
+      {...rest}
     >
       {children}
     </Tag>
