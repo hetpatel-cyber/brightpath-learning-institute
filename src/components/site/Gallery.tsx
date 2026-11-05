@@ -10,7 +10,7 @@ const layout = [
   "col-span-1 row-span-1 lg:col-span-2 lg:row-span-1",
   "col-span-1 row-span-2 lg:col-span-2 lg:row-span-2",
   "col-span-1 row-span-1 lg:col-span-2 lg:row-span-1",
-  "col-span-2 row-span-1 lg:col-span-2 lg:row-span-1",
+  "col-span-2 row-span-1 lg:col-span-4 lg:row-span-1",
 ];
 
 export function Gallery() {
