@@ -188,7 +188,7 @@ export function Enquiry() {
                 </Field>
                 <div className="sm:col-span-2">
                   <Field id="course" label="Course interested in" error={err("course")}>
-                    <select id="course" className={cn(fieldBase, "appearance-none bg-[length:1rem] pr-10")} {...aria("course")} {...register("course")}>
+                    <select id="course" className={cn(fieldBase, "pr-10")} {...aria("course")} {...register("course")}>
                       <option value="">Select a course</option>
                       {courses.map((c) => (
                         <option key={c.slug} value={c.name}>
