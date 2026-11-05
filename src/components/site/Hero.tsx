@@ -8,7 +8,7 @@ export function Hero() {
   return (
     <section id="top" aria-labelledby="hero-title" className="relative overflow-hidden pt-24 md:pt-28 lg:pt-32">
       <div className="container-site grid items-center gap-12 pb-16 lg:grid-cols-12 lg:gap-10 lg:pb-24">
-        <div className="lg:col-span-6 xl:col-span-5">
+        <div className="lg:col-span-6">
           <p className="eyebrow animate-in fade-in slide-in-from-bottom-2 duration-700">Building Stronger Futures</p>
           <h1
             id="hero-title"
@@ -48,7 +48,7 @@ export function Hero() {
           </dl>
         </div>
 
-        <div className="relative lg:col-span-6 xl:col-span-7">
+        <div className="relative lg:col-span-6">
           <div aria-hidden="true" className="absolute -top-6 -right-24 bottom-10 left-16 hidden bg-navy texture-grid lg:block" />
           <figure className="relative">
             <div className="overflow-hidden rounded-sm shadow-lift">

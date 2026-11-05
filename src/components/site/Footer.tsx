@@ -8,7 +8,7 @@ export function Footer({ onHome = true }: { onHome?: boolean }) {
   return (
     <footer className="relative bg-navy-deep text-on-navy-muted">
       <div aria-hidden="true" className="absolute inset-0 texture-grid" />
-      <div className="container-site relative pt-16 pb-28 sm:pb-12 lg:pt-20">
+      <div className="container-site relative pt-16 pb-28 lg:pt-20">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
           <div className="lg:col-span-4">
             <a href={`${prefix}#top`} className="flex items-center gap-3">
